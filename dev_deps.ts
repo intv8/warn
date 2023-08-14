@@ -21,12 +21,14 @@ export {
   assertEquals,
 } from 'https://deno.land/std@0.186.0/testing/asserts.ts';
 
+//  Used for mocking dependencies
 export {
   assertSpyCalls,
   spy,
   stub,
 } from 'https://deno.land/std@0.186.0/testing/mock.ts';
 
+//  Used for cross-package exception testing
 export {
   allCodesFixture,
   I11N_EX2_HOST,
