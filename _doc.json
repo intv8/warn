@@ -1,0 +1,2085 @@
+[
+  {
+    "kind": "class",
+    "name": "WarningCollector",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+      "line": 10,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A class that collects warnings, logs them to a provided logger, and displays collected warnings."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new `WarningCollector` with the provided logger."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "accessibility": "protected",
+              "kind": "identifier",
+              "name": "logger",
+              "optional": false,
+              "tsType": {
+                "repr": "",
+                "kind": "fnOrConstructor",
+                "fnOrConstructor": {
+                  "constructor": false,
+                  "tsType": {
+                    "repr": "void",
+                    "kind": "keyword",
+                    "keyword": "void"
+                  },
+                  "params": [
+                    {
+                      "kind": "identifier",
+                      "name": "message",
+                      "optional": false,
+                      "tsType": {
+                        "repr": "string",
+                        "kind": "keyword",
+                        "keyword": "string"
+                      }
+                    }
+                  ],
+                  "typeParams": []
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+            "line": 15,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warnings collected by this `WarningCollector`."
+          },
+          "tsType": {
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "Warning",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "Warning"
+              }
+            }
+          },
+          "readonly": false,
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "warnings",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+            "line": 12,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [
+        {
+          "jsDoc": {
+            "doc": "Adds a warning to the `WarningCollector`."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "add",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "warning",
+                "optional": false,
+                "tsType": {
+                  "repr": "Warning",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "Warning"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+            "line": 20,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Migrate collected warnings to a new `WarningCollector`. Does not re-log warnings."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "migrateTo",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "newCollector",
+                "optional": false,
+                "tsType": {
+                  "repr": "WarningCollector",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "WarningCollector"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+            "line": 27,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Returns warnings in the `WarningCollector`."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "listWarnings",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "",
+              "kind": "array",
+              "array": {
+                "repr": "Warning",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Warning"
+                }
+              }
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/warning_collector.ts",
+            "line": 35,
+            "col": 2
+          }
+        }
+      ],
+      "extends": null,
+      "implements": [],
+      "typeParams": [],
+      "superTypeParams": []
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "warnings",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/warnings.ts",
+      "line": 94,
+      "col": 13
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The global {@link WarningsManager} instance."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "WarningsManager",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "WarningsManager"
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "VERSION",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/version.ts",
+      "line": 11,
+      "col": 13
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The current release version of the partic11e warn package."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.1",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.1"
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "class",
+    "name": "FutureWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/future_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting to future changes for a codebase."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link FutureWarning} warning with the provided message, optionally with additional {@link FutureWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/future_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link FutureWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/future_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "Warning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "FutureWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "FutureWarningInit"
+            }
+          },
+          "default": {
+            "repr": "FutureWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "FutureWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "FutureWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/future_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link FutureWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "MemoryWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/memory_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting when an operation is expected to encounter memory issues."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link MemoryWarning} warning with the provided message, optionally with additional {@link MemoryWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/memory_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link MemoryWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/memory_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "OSWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "MemoryWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "MemoryWarningInit"
+            }
+          },
+          "default": {
+            "repr": "MemoryWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "MemoryWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "MemoryWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/memory_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link MemoryWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "DiskWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/disk_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "An warning alerting when an operation is expected to encounter disk issues."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link DiskWarning} warning with the provided message, optionally with additional {@link DiskWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/disk_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link DiskWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/disk_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "OSWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "DiskWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DiskWarningInit"
+            }
+          },
+          "default": {
+            "repr": "DiskWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DiskWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "DiskWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/disk_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link DiskWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "OSWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/os_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The base warning for OS-related warnings."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link OSWarning} warning with the provided message, optionally with additional {@link OSWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/os_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link OSWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/os_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "Warning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "OSWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "OSWarningInit"
+            }
+          },
+          "default": {
+            "repr": "OSWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "OSWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "OSWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/os_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link OSWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "ConnectionWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/connection_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that an active connection may encounter issues. e.g. link quality, speed, etc."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link ConnectionWarning} warning with the provided message, optionally with additional {@link ConnectionWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/connection_warning.ts",
+            "line": 21,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link ConnectionWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/connection_warning.ts",
+            "line": 26,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "OSWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "ConnectionWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ConnectionWarningInit"
+            }
+          },
+          "default": {
+            "repr": "ConnectionWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ConnectionWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "ConnectionWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/connection_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link ConnectionWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "DeprecationWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+      "line": 76,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that a feature is pending deprecation."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link DeprecationWarning} exception with the default message and no exception init properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+            "line": 80,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link DeprecationWarning} exception with a message created from the provided {@link DeprecationWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+            "line": 83,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link DeprecationWarning} exception with the provided message, optionally with additional {@link DeprecationWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+            "line": 86,
+            "col": 2
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "msgOrInit",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            },
+            {
+              "kind": "identifier",
+              "name": "maybeInit",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+            "line": 90,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link DeprecationWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+            "line": 103,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "FutureWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "DeprecationWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DeprecationWarningInit"
+            }
+          },
+          "default": {
+            "repr": "DeprecationWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DeprecationWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "DeprecationWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/deprecation_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link DeprecationWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "featureType",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "featureName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "alternativeFeatureName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "aboutUrl",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            }
+          ],
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "PendingDeprecationWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+      "line": 56,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that a feature is pending deprecation."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link PendingDeprecationWarning} exception with the default message and no exception init properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+            "line": 60,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link PendingDeprecationWarning} exception with a message created from the provided {@link PendingDeprecationWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+            "line": 63,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link PendingDeprecationWarning} exception with the provided message, optionally with additional {@link PendingDeprecationWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+            "line": 66,
+            "col": 2
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "msgOrInit",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            },
+            {
+              "kind": "identifier",
+              "name": "maybeInit",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+            "line": 70,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link PendingDeprecationWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+            "line": 83,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "FutureWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "PendingDeprecationWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "PendingDeprecationWarningInit"
+            }
+          },
+          "default": {
+            "repr": "PendingDeprecationWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "PendingDeprecationWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "PendingDeprecationWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/pending_deprecation_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link PendingDeprecationWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "featureType",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "featureName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "aboutUrl",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            }
+          ],
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "ProcessWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/process_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that a process may encounter issues. e.g. a dependency is not started and may cause issues, but will not prevent the process from starting."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link ProcessWarning} warning with the provided message, optionally with additional {@link ProcessWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/process_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link ProcessWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/process_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "OSWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "ProcessWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ProcessWarningInit"
+            }
+          },
+          "default": {
+            "repr": "ProcessWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ProcessWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "ProcessWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/process_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link ProcessWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "Warning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A generic warning from which all warnings are derived."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link Warning} warning with the provided message, optionally with additional {@link Warning} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/warning.ts",
+            "line": 16,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link Warning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/warning.ts",
+            "line": 21,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "Exception",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "WarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "WarningInit"
+            }
+          },
+          "default": {
+            "repr": "WarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "WarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "WarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/warning.ts",
+      "line": 11,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link Warning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "StabilityWarning",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+      "line": 57,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that a feature is not stable, or has an indeterminant API, and should not be used in production."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with the default message and no exception init properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+            "line": 61,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with a message created from the provided {@link StabilityWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+            "line": 64,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with the provided message, optionally with additional {@link StabilityWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+            "line": 67,
+            "col": 2
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "msgOrInit",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            },
+            {
+              "kind": "identifier",
+              "name": "maybeInit",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+            "line": 71,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link StabilityWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+            "line": 84,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "FutureWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "StabilityWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "StabilityWarningInit"
+            }
+          },
+          "default": {
+            "repr": "StabilityWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "StabilityWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "StabilityWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/partic11e/warn/src/exceptions/stability_warning.ts",
+      "line": 18,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link StabilityWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "featureType",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "featureName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "aboutUrl",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            }
+          ],
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  }
+]
