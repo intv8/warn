@@ -1,7 +1,7 @@
 /**
  * This file exports the WarningCollector class.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { Warning } from './exceptions/warning.ts';

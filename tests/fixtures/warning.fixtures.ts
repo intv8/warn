@@ -3,7 +3,7 @@
  *
  * For use in ../warning.test.ts.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
