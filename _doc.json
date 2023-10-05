@@ -25,242 +25,22 @@
   },
   {
     "kind": "class",
-    "name": "WarningCollector",
+    "name": "OSWarning",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-      "line": 10,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "A class that collects warnings, logs them to a provided logger, and displays collected warnings."
-    },
-    "classDef": {
-      "isAbstract": false,
-      "constructors": [
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link WarningCollector} with the provided logger."
-          },
-          "accessibility": null,
-          "hasBody": true,
-          "name": "constructor",
-          "params": [
-            {
-              "accessibility": "protected",
-              "kind": "identifier",
-              "name": "logger",
-              "optional": false,
-              "tsType": {
-                "repr": "",
-                "kind": "fnOrConstructor",
-                "fnOrConstructor": {
-                  "constructor": false,
-                  "tsType": {
-                    "repr": "void",
-                    "kind": "keyword",
-                    "keyword": "void"
-                  },
-                  "params": [
-                    {
-                      "kind": "identifier",
-                      "name": "message",
-                      "optional": false,
-                      "tsType": {
-                        "repr": "string",
-                        "kind": "keyword",
-                        "keyword": "string"
-                      }
-                    }
-                  ],
-                  "typeParams": []
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-            "line": 15,
-            "col": 2
-          }
-        }
-      ],
-      "properties": [
-        {
-          "jsDoc": {
-            "doc": "The warnings collected by this {@link WarningCollector}."
-          },
-          "tsType": {
-            "repr": "",
-            "kind": "array",
-            "array": {
-              "repr": "Warning",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": null,
-                "typeName": "Warning"
-              }
-            }
-          },
-          "readonly": false,
-          "accessibility": "protected",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "warnings",
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-            "line": 12,
-            "col": 2
-          }
-        }
-      ],
-      "indexSignatures": [],
-      "methods": [
-        {
-          "jsDoc": {
-            "doc": "Adds a warning to the {@link WarningCollector}."
-          },
-          "accessibility": "public",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "add",
-          "kind": "method",
-          "functionDef": {
-            "params": [
-              {
-                "kind": "identifier",
-                "name": "warning",
-                "optional": false,
-                "tsType": {
-                  "repr": "Warning",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "Warning"
-                  }
-                }
-              }
-            ],
-            "returnType": {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            },
-            "hasBody": true,
-            "isAsync": false,
-            "isGenerator": false,
-            "typeParams": []
-          },
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-            "line": 20,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Migrate collected warnings to a new {@link WarningCollector}. Does not re-log warnings."
-          },
-          "accessibility": "public",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "migrateTo",
-          "kind": "method",
-          "functionDef": {
-            "params": [
-              {
-                "kind": "identifier",
-                "name": "newCollector",
-                "optional": false,
-                "tsType": {
-                  "repr": "WarningCollector",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WarningCollector"
-                  }
-                }
-              }
-            ],
-            "returnType": {
-              "repr": "void",
-              "kind": "keyword",
-              "keyword": "void"
-            },
-            "hasBody": true,
-            "isAsync": false,
-            "isGenerator": false,
-            "typeParams": []
-          },
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-            "line": 27,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Returns warnings in the {@link WarningCollector}."
-          },
-          "accessibility": "public",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "listWarnings",
-          "kind": "method",
-          "functionDef": {
-            "params": [],
-            "returnType": {
-              "repr": "",
-              "kind": "array",
-              "array": {
-                "repr": "Warning",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "Warning"
-                }
-              }
-            },
-            "hasBody": true,
-            "isAsync": false,
-            "isGenerator": false,
-            "typeParams": []
-          },
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
-            "line": 35,
-            "col": 2
-          }
-        }
-      ],
-      "extends": null,
-      "implements": [],
-      "typeParams": [],
-      "superTypeParams": []
-    }
-  },
-  {
-    "kind": "class",
-    "name": "FutureWarning",
-    "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
       "line": 17,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "A warning alerting to future changes for a codebase."
+      "doc": "The base warning for OS-related warnings."
     },
     "classDef": {
       "isAbstract": false,
       "constructors": [
         {
           "jsDoc": {
-            "doc": "Creates a new {@link FutureWarning} warning with the provided message, optionally with additional {@link FutureWarningInit} properties."
+            "doc": "Creates a new {@link OSWarning} warning with the provided message, optionally with additional {@link OSWarningInit} properties."
           },
           "accessibility": null,
           "hasBody": true,
@@ -291,7 +71,7 @@
             }
           ],
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
             "line": 20,
             "col": 2
           }
@@ -300,7 +80,7 @@
       "properties": [
         {
           "jsDoc": {
-            "doc": "The warning code for the {@link FutureWarning} warning."
+            "doc": "The warning code for the {@link OSWarning} warning."
           },
           "tsType": {
             "repr": "number",
@@ -314,7 +94,7 @@
           "isStatic": false,
           "name": "code",
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
             "line": 25,
             "col": 2
           }
@@ -328,19 +108,19 @@
         {
           "name": "T",
           "constraint": {
-            "repr": "FutureWarningInit",
+            "repr": "OSWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "FutureWarningInit"
+              "typeName": "OSWarningInit"
             }
           },
           "default": {
-            "repr": "FutureWarningInit",
+            "repr": "OSWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "FutureWarningInit"
+              "typeName": "OSWarningInit"
             }
           }
         }
@@ -359,153 +139,15 @@
   },
   {
     "kind": "typeAlias",
-    "name": "FutureWarningInit",
+    "name": "OSWarningInit",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
       "line": 14,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "The warning init properties for the {@link FutureWarning} warning."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "BaseExceptionInit",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": null,
-          "typeName": "BaseExceptionInit"
-        }
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "class",
-    "name": "ProcessWarning",
-    "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
-      "line": 17,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "A warning alerting that a process may encounter issues. e.g. a dependency is not started and may cause issues, but will not prevent the process from starting."
-    },
-    "classDef": {
-      "isAbstract": false,
-      "constructors": [
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link ProcessWarning} warning with the provided message, optionally with additional {@link ProcessWarningInit} properties."
-          },
-          "accessibility": null,
-          "hasBody": true,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "message",
-              "optional": false,
-              "tsType": {
-                "repr": "string",
-                "kind": "keyword",
-                "keyword": "string"
-              }
-            },
-            {
-              "kind": "identifier",
-              "name": "init",
-              "optional": true,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
-            "line": 20,
-            "col": 2
-          }
-        }
-      ],
-      "properties": [
-        {
-          "jsDoc": {
-            "doc": "The warning code for the {@link ProcessWarning} warning."
-          },
-          "tsType": {
-            "repr": "number",
-            "kind": "keyword",
-            "keyword": "number"
-          },
-          "readonly": false,
-          "accessibility": "public",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "code",
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
-            "line": 25,
-            "col": 2
-          }
-        }
-      ],
-      "indexSignatures": [],
-      "methods": [],
-      "extends": "OSWarning",
-      "implements": [],
-      "typeParams": [
-        {
-          "name": "T",
-          "constraint": {
-            "repr": "ProcessWarningInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "ProcessWarningInit"
-            }
-          },
-          "default": {
-            "repr": "ProcessWarningInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "ProcessWarningInit"
-            }
-          }
-        }
-      ],
-      "superTypeParams": [
-        {
-          "repr": "T",
-          "kind": "typeRef",
-          "typeRef": {
-            "typeParams": null,
-            "typeName": "T"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "ProcessWarningInit",
-    "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
-      "line": 14,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The warning init properties for the {@link ProcessWarning} warning."
+      "doc": "The warning init properties for the {@link OSWarning} warning."
     },
     "typeAliasDef": {
       "tsType": {
@@ -644,6 +286,144 @@
     "declarationKind": "export",
     "jsDoc": {
       "doc": "The warning init properties for the {@link MemoryWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "DiskWarning",
+    "location": {
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
+      "line": 17,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "An warning alerting when an operation is expected to encounter disk issues."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link DiskWarning} warning with the provided message, optionally with additional {@link DiskWarningInit} properties."
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
+            "line": 20,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link DiskWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
+            "line": 25,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "OSWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "DiskWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DiskWarningInit"
+            }
+          },
+          "default": {
+            "repr": "DiskWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "DiskWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "DiskWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
+      "line": 14,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link DiskWarning} warning."
     },
     "typeAliasDef": {
       "tsType": {
@@ -950,64 +730,25 @@
   },
   {
     "kind": "class",
-    "name": "StabilityWarning",
+    "name": "ConnectionWarning",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-      "line": 57,
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+      "line": 17,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "A warning alerting that a feature is not stable, or has an indeterminant API, and should not be used in production."
+      "doc": "A warning alerting that an active connection may encounter issues. e.g. link quality, speed, etc."
     },
     "classDef": {
       "isAbstract": false,
       "constructors": [
         {
           "jsDoc": {
-            "doc": "Creates a new {@link StabilityWarning} exception with the default message and no exception init properties."
+            "doc": "Creates a new {@link ConnectionWarning} warning with the provided message, optionally with additional {@link ConnectionWarningInit} properties."
           },
           "accessibility": null,
-          "name": "constructor",
-          "params": [],
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-            "line": 61,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link StabilityWarning} exception with a message created from the provided {@link StabilityWarningInit} properties."
-          },
-          "accessibility": null,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "init",
-              "optional": false,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-            "line": 64,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link StabilityWarning} exception with the provided message, optionally with additional {@link StabilityWarningInit} properties."
-          },
-          "accessibility": null,
+          "hasBody": true,
           "name": "constructor",
           "params": [
             {
@@ -1035,62 +776,8 @@
             }
           ],
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-            "line": 67,
-            "col": 2
-          }
-        },
-        {
-          "accessibility": null,
-          "hasBody": true,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "assign",
-              "left": {
-                "kind": "identifier",
-                "name": "msgOrInit",
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "T",
-                      "kind": "typeRef",
-                      "typeRef": {
-                        "typeParams": null,
-                        "typeName": "T"
-                      }
-                    }
-                  ]
-                }
-              },
-              "right": "[UNSUPPORTED]",
-              "tsType": null
-            },
-            {
-              "kind": "identifier",
-              "name": "maybeInit",
-              "optional": true,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-            "line": 71,
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+            "line": 21,
             "col": 2
           }
         }
@@ -1098,7 +785,7 @@
       "properties": [
         {
           "jsDoc": {
-            "doc": "The warning code for the {@link StabilityWarning} warning."
+            "doc": "The warning code for the {@link ConnectionWarning} warning."
           },
           "tsType": {
             "repr": "number",
@@ -1112,33 +799,33 @@
           "isStatic": false,
           "name": "code",
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-            "line": 84,
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+            "line": 26,
             "col": 2
           }
         }
       ],
       "indexSignatures": [],
       "methods": [],
-      "extends": "FutureWarning",
+      "extends": "OSWarning",
       "implements": [],
       "typeParams": [
         {
           "name": "T",
           "constraint": {
-            "repr": "StabilityWarningInit",
+            "repr": "ConnectionWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "StabilityWarningInit"
+              "typeName": "ConnectionWarningInit"
             }
           },
           "default": {
-            "repr": "StabilityWarningInit",
+            "repr": "ConnectionWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "StabilityWarningInit"
+              "typeName": "ConnectionWarningInit"
             }
           }
         }
@@ -1157,70 +844,22 @@
   },
   {
     "kind": "typeAlias",
-    "name": "StabilityWarningInit",
+    "name": "ConnectionWarningInit",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
-      "line": 18,
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+      "line": 14,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "The warning init properties for the {@link StabilityWarning} warning."
+      "doc": "The warning init properties for the {@link ConnectionWarning} warning."
     },
     "typeAliasDef": {
       "tsType": {
         "repr": "BaseExceptionInit",
         "kind": "typeRef",
         "typeRef": {
-          "typeParams": [
-            {
-              "repr": "",
-              "kind": "typeLiteral",
-              "typeLiteral": {
-                "methods": [],
-                "properties": [
-                  {
-                    "name": "featureType",
-                    "params": [],
-                    "computed": false,
-                    "optional": true,
-                    "tsType": {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    "typeParams": []
-                  },
-                  {
-                    "name": "featureName",
-                    "params": [],
-                    "computed": false,
-                    "optional": true,
-                    "tsType": {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    "typeParams": []
-                  },
-                  {
-                    "name": "aboutUrl",
-                    "params": [],
-                    "computed": false,
-                    "optional": true,
-                    "tsType": {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    "typeParams": []
-                  }
-                ],
-                "callSignatures": [],
-                "indexSignatures": []
-              }
-            }
-          ],
+          "typeParams": null,
           "typeName": "BaseExceptionInit"
         }
       },
@@ -1508,22 +1147,22 @@
   },
   {
     "kind": "class",
-    "name": "OSWarning",
+    "name": "ProcessWarning",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
       "line": 17,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "The base warning for OS-related warnings."
+      "doc": "A warning alerting that a process may encounter issues. e.g. a dependency is not started and may cause issues, but will not prevent the process from starting."
     },
     "classDef": {
       "isAbstract": false,
       "constructors": [
         {
           "jsDoc": {
-            "doc": "Creates a new {@link OSWarning} warning with the provided message, optionally with additional {@link OSWarningInit} properties."
+            "doc": "Creates a new {@link ProcessWarning} warning with the provided message, optionally with additional {@link ProcessWarningInit} properties."
           },
           "accessibility": null,
           "hasBody": true,
@@ -1554,7 +1193,7 @@
             }
           ],
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
             "line": 20,
             "col": 2
           }
@@ -1563,7 +1202,7 @@
       "properties": [
         {
           "jsDoc": {
-            "doc": "The warning code for the {@link OSWarning} warning."
+            "doc": "The warning code for the {@link ProcessWarning} warning."
           },
           "tsType": {
             "repr": "number",
@@ -1577,7 +1216,7 @@
           "isStatic": false,
           "name": "code",
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
             "line": 25,
             "col": 2
           }
@@ -1585,25 +1224,25 @@
       ],
       "indexSignatures": [],
       "methods": [],
-      "extends": "Warning",
+      "extends": "OSWarning",
       "implements": [],
       "typeParams": [
         {
           "name": "T",
           "constraint": {
-            "repr": "OSWarningInit",
+            "repr": "ProcessWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "OSWarningInit"
+              "typeName": "ProcessWarningInit"
             }
           },
           "default": {
-            "repr": "OSWarningInit",
+            "repr": "ProcessWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "OSWarningInit"
+              "typeName": "ProcessWarningInit"
             }
           }
         }
@@ -1622,15 +1261,15 @@
   },
   {
     "kind": "typeAlias",
-    "name": "OSWarningInit",
+    "name": "ProcessWarningInit",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/os_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/process_warning.ts",
       "line": 14,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "The warning init properties for the {@link OSWarning} warning."
+      "doc": "The warning init properties for the {@link ProcessWarning} warning."
     },
     "typeAliasDef": {
       "tsType": {
@@ -1638,6 +1277,285 @@
         "kind": "typeRef",
         "typeRef": {
           "typeParams": null,
+          "typeName": "BaseExceptionInit"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "StabilityWarning",
+    "location": {
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+      "line": 57,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A warning alerting that a feature is not stable, or has an indeterminant API, and should not be used in production."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with the default message and no exception init properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+            "line": 61,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with a message created from the provided {@link StabilityWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+            "line": 64,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link StabilityWarning} exception with the provided message, optionally with additional {@link StabilityWarningInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+            "line": 67,
+            "col": 2
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "msgOrInit",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            },
+            {
+              "kind": "identifier",
+              "name": "maybeInit",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+            "line": 71,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The warning code for the {@link StabilityWarning} warning."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+            "line": 84,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "FutureWarning",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "StabilityWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "StabilityWarningInit"
+            }
+          },
+          "default": {
+            "repr": "StabilityWarningInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "StabilityWarningInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "StabilityWarningInit",
+    "location": {
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/stability_warning.ts",
+      "line": 18,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The warning init properties for the {@link StabilityWarning} warning."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "featureType",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "featureName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "aboutUrl",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            }
+          ],
           "typeName": "BaseExceptionInit"
         }
       },
@@ -1784,22 +1702,22 @@
   },
   {
     "kind": "class",
-    "name": "ConnectionWarning",
+    "name": "FutureWarning",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
       "line": 17,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "A warning alerting that an active connection may encounter issues. e.g. link quality, speed, etc."
+      "doc": "A warning alerting to future changes for a codebase."
     },
     "classDef": {
       "isAbstract": false,
       "constructors": [
         {
           "jsDoc": {
-            "doc": "Creates a new {@link ConnectionWarning} warning with the provided message, optionally with additional {@link ConnectionWarningInit} properties."
+            "doc": "Creates a new {@link FutureWarning} warning with the provided message, optionally with additional {@link FutureWarningInit} properties."
           },
           "accessibility": null,
           "hasBody": true,
@@ -1830,8 +1748,8 @@
             }
           ],
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
-            "line": 21,
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+            "line": 20,
             "col": 2
           }
         }
@@ -1839,7 +1757,7 @@
       "properties": [
         {
           "jsDoc": {
-            "doc": "The warning code for the {@link ConnectionWarning} warning."
+            "doc": "The warning code for the {@link FutureWarning} warning."
           },
           "tsType": {
             "repr": "number",
@@ -1853,33 +1771,33 @@
           "isStatic": false,
           "name": "code",
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
-            "line": 26,
+            "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
+            "line": 25,
             "col": 2
           }
         }
       ],
       "indexSignatures": [],
       "methods": [],
-      "extends": "OSWarning",
+      "extends": "Warning",
       "implements": [],
       "typeParams": [
         {
           "name": "T",
           "constraint": {
-            "repr": "ConnectionWarningInit",
+            "repr": "FutureWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "ConnectionWarningInit"
+              "typeName": "FutureWarningInit"
             }
           },
           "default": {
-            "repr": "ConnectionWarningInit",
+            "repr": "FutureWarningInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "ConnectionWarningInit"
+              "typeName": "FutureWarningInit"
             }
           }
         }
@@ -1898,15 +1816,15 @@
   },
   {
     "kind": "typeAlias",
-    "name": "ConnectionWarningInit",
+    "name": "FutureWarningInit",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/connection_warning.ts",
+      "filename": "file:///C:/repos/intv8/warn/src/exceptions/future_warning.ts",
       "line": 14,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "The warning init properties for the {@link ConnectionWarning} warning."
+      "doc": "The warning init properties for the {@link FutureWarning} warning."
     },
     "typeAliasDef": {
       "tsType": {
@@ -1922,54 +1840,62 @@
   },
   {
     "kind": "class",
-    "name": "DiskWarning",
+    "name": "WarningCollector",
     "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
-      "line": 17,
+      "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+      "line": 10,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "An warning alerting when an operation is expected to encounter disk issues."
+      "doc": "A class that collects warnings, logs them to a provided logger, and displays collected warnings."
     },
     "classDef": {
       "isAbstract": false,
       "constructors": [
         {
           "jsDoc": {
-            "doc": "Creates a new {@link DiskWarning} warning with the provided message, optionally with additional {@link DiskWarningInit} properties."
+            "doc": "Creates a new {@link WarningCollector} with the provided logger."
           },
           "accessibility": null,
           "hasBody": true,
           "name": "constructor",
           "params": [
             {
+              "accessibility": "protected",
               "kind": "identifier",
-              "name": "message",
+              "name": "logger",
               "optional": false,
               "tsType": {
-                "repr": "string",
-                "kind": "keyword",
-                "keyword": "string"
-              }
-            },
-            {
-              "kind": "identifier",
-              "name": "init",
-              "optional": true,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
+                "repr": "",
+                "kind": "fnOrConstructor",
+                "fnOrConstructor": {
+                  "constructor": false,
+                  "tsType": {
+                    "repr": "void",
+                    "kind": "keyword",
+                    "keyword": "void"
+                  },
+                  "params": [
+                    {
+                      "kind": "identifier",
+                      "name": "message",
+                      "optional": false,
+                      "tsType": {
+                        "repr": "string",
+                        "kind": "keyword",
+                        "keyword": "string"
+                      }
+                    }
+                  ],
+                  "typeParams": []
                 }
               }
             }
           ],
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
-            "line": 20,
+            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+            "line": 15,
             "col": 2
           }
         }
@@ -1977,85 +1903,159 @@
       "properties": [
         {
           "jsDoc": {
-            "doc": "The warning code for the {@link DiskWarning} warning."
+            "doc": "The warnings collected by this {@link WarningCollector}."
           },
           "tsType": {
-            "repr": "number",
-            "kind": "keyword",
-            "keyword": "number"
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "Warning",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "Warning"
+              }
+            }
           },
           "readonly": false,
-          "accessibility": "public",
+          "accessibility": "protected",
           "optional": false,
           "isAbstract": false,
           "isStatic": false,
-          "name": "code",
+          "name": "warnings",
           "location": {
-            "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
-            "line": 25,
+            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+            "line": 12,
             "col": 2
           }
         }
       ],
       "indexSignatures": [],
-      "methods": [],
-      "extends": "OSWarning",
-      "implements": [],
-      "typeParams": [
+      "methods": [
         {
-          "name": "T",
-          "constraint": {
-            "repr": "DiskWarningInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "DiskWarningInit"
-            }
+          "jsDoc": {
+            "doc": "Adds a warning to the {@link WarningCollector}."
           },
-          "default": {
-            "repr": "DiskWarningInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "DiskWarningInit"
-            }
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "add",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "warning",
+                "optional": false,
+                "tsType": {
+                  "repr": "Warning",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "Warning"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+            "line": 20,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Migrate collected warnings to a new {@link WarningCollector}. Does not re-log warnings."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "migrateTo",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "newCollector",
+                "optional": false,
+                "tsType": {
+                  "repr": "WarningCollector",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "WarningCollector"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+            "line": 27,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Returns warnings in the {@link WarningCollector}."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "listWarnings",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "",
+              "kind": "array",
+              "array": {
+                "repr": "Warning",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Warning"
+                }
+              }
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///C:/repos/intv8/warn/src/warning_collector.ts",
+            "line": 35,
+            "col": 2
           }
         }
       ],
-      "superTypeParams": [
-        {
-          "repr": "T",
-          "kind": "typeRef",
-          "typeRef": {
-            "typeParams": null,
-            "typeName": "T"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "DiskWarningInit",
-    "location": {
-      "filename": "file:///C:/repos/intv8/warn/src/exceptions/disk_warning.ts",
-      "line": 14,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The warning init properties for the {@link DiskWarning} warning."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "BaseExceptionInit",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": null,
-          "typeName": "BaseExceptionInit"
-        }
-      },
-      "typeParams": []
+      "extends": null,
+      "implements": [],
+      "typeParams": [],
+      "superTypeParams": []
     }
   },
   {

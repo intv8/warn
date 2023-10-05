@@ -118,10 +118,9 @@ The MIT License (MIT) 2022 integereleven. Refer to [LICENSE][license] for detail
 <p align="center">
 <img
   alt="intv8 logo"
-  height="24"
+  height="64"
   src="https://raw.githubusercontent.com/i11n/.github/main/profile/img/frm/logo-open-source.svg"
 />
-<sub>open source</sub>
 </p>
 
 [deno]: https://deno.land "Deno homepage"
