@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['Memory low.', {
     name: 'MemoryWarning',
@@ -18,7 +16,7 @@ export const messageFixtures = [
     asValue: 66,
     cause: undefined,
     data: undefined,
-    helpUrl: `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x42?message=Memory%20low.`,
+    helpUrl: `/0x42?message=Memory%20low.`,
   }],
 ] as const;
 
@@ -31,12 +29,11 @@ export const messageCauseFixtures = [
     code: 66,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x42?message=Memory%20low.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x42?message=Memory%20low.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -49,10 +46,9 @@ export const messageDataFixtures = [
     code: 66,
     cause: undefined,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x42?message=Memory%20low.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }`,
+    helpUrl: `/0x42?message=Memory%20low.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }`,
   }],
 ] as const;
 
@@ -63,13 +59,12 @@ export const messageDataCauseFixtures = [
     code: 66,
     cause: cause0,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x42?message=Memory%20low.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x42?message=Memory%20low.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;

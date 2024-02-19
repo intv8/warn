@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['', {
     name: 'PendingDeprecationWarning',
@@ -19,8 +17,7 @@ export const messageFixtures = [
     asValue: 74,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=A%20feature%20is%20pending%20deprecation.`,
+    helpUrl: `/0x4a?message=A%20feature%20is%20pending%20deprecation.`,
   }],
   ['This feature will be removed.', {
     name: 'PendingDeprecationWarning',
@@ -30,8 +27,7 @@ export const messageFixtures = [
     asValue: 74,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=This%20feature%20will%20be%20removed.`,
+    helpUrl: `/0x4a?message=This%20feature%20will%20be%20removed.`,
   }],
 ] as const;
 
@@ -54,8 +50,7 @@ export const initFixtures = [
     asValue: 74,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=A%20feature%20is%20pending%20deprecation.`,
+    helpUrl: `/0x4a?message=A%20feature%20is%20pending%20deprecation.`,
   }],
   [init1, {
     name: 'PendingDeprecationWarning',
@@ -66,10 +61,9 @@ export const initFixtures = [
     asValue: 74,
     cause: undefined,
     data: init1,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=A%20function%20is%20pending%20deprecation.&data=${
-        encodeURIComponent(JSON.stringify(init1))
-      }`,
+    helpUrl: `/0x4a?message=A%20function%20is%20pending%20deprecation.&data=${
+      encodeURIComponent(JSON.stringify(init1))
+    }`,
   }],
   [init2, {
     name: 'PendingDeprecationWarning',
@@ -81,7 +75,7 @@ export const initFixtures = [
     cause: undefined,
     data: init2,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=The%20feature%20%22example%22%20is%20pending%20deprecation.&data=${
+      `/0x4a?message=The%20feature%20%22example%22%20is%20pending%20deprecation.&data=${
         encodeURIComponent(JSON.stringify(init2))
       }`,
   }],
@@ -96,7 +90,7 @@ export const initFixtures = [
     cause: undefined,
     data: init3,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=A%20feature%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4a?message=A%20feature%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init3))
       }`,
   }],
@@ -110,7 +104,7 @@ export const initFixtures = [
     cause: undefined,
     data: init4,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=The%20function%20%22example%22%20is%20pending%20deprecation.&data=${
+      `/0x4a?message=The%20function%20%22example%22%20is%20pending%20deprecation.&data=${
         encodeURIComponent(JSON.stringify(init4))
       }`,
   }],
@@ -125,7 +119,7 @@ export const initFixtures = [
     cause: undefined,
     data: init5,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=A%20function%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4a?message=A%20function%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init5))
       }`,
   }],
@@ -140,7 +134,7 @@ export const initFixtures = [
     cause: undefined,
     data: init6,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=The%20feature%20%22example%22%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4a?message=The%20feature%20%22example%22%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init6))
       }`,
   }],
@@ -155,7 +149,7 @@ export const initFixtures = [
     cause: undefined,
     data: init7,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=The%20function%20%22example%22%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4a?message=The%20function%20%22example%22%20is%20pending%20deprecation.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init7))
       }`,
   }],
@@ -170,12 +164,11 @@ export const messageCauseFixtures = [
     code: 74,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=This%20feature%20is%20unstable.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x4a?message=This%20feature%20is%20unstable.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -186,10 +179,9 @@ export const messageDataFixtures = [
     code: 74,
     cause: undefined,
     data: init7,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=This%20feature%20is%20unstable.&data=${
-        encodeURIComponent(JSON.stringify(init7))
-      }`,
+    helpUrl: `/0x4a?message=This%20feature%20is%20unstable.&data=${
+      encodeURIComponent(JSON.stringify(init7))
+    }`,
   }],
 ] as const;
 
@@ -200,13 +192,12 @@ export const messageDataCauseFixtures = [
     code: 74,
     cause: cause0,
     data: init7,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4a?message=This%20feature%20is%20unstable.&data=${
-        encodeURIComponent(JSON.stringify(init7))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x4a?message=This%20feature%20is%20unstable.&data=${
+      encodeURIComponent(JSON.stringify(init7))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;

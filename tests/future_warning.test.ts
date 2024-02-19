@@ -4,7 +4,13 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { assert, assertEquals, describe, it } from '../dev_deps.ts';
+import {
+  assert,
+  assertEquals,
+  assertStringIncludes,
+  describe,
+  it,
+} from '../dev_deps.ts';
 
 import { FutureWarning, Warning } from '../mod.ts';
 
@@ -47,7 +53,7 @@ describe('FutureWarning', () => {
         assertEquals(ex.code, expected.code);
         assertEquals(ex.cause, expected.cause);
         assertEquals(ex.data, expected.data);
-        assertEquals(ex.helpUrl, expected.helpUrl);
+        assertStringIncludes(ex.helpUrl, expected.helpUrl);
       });
     });
   });
@@ -63,7 +69,7 @@ describe('FutureWarning', () => {
         assertEquals(ex.code, expected.code);
         assertEquals(ex.cause, expected.cause);
         assertEquals(ex.data, expected.data);
-        assertEquals(ex.helpUrl, expected.helpUrl);
+        assertStringIncludes(ex.helpUrl, expected.helpUrl);
       });
     });
   });
@@ -79,7 +85,7 @@ describe('FutureWarning', () => {
         assertEquals(ex.code, expected.code);
         assertEquals(ex.cause, expected.cause);
         assertEquals(ex.data, expected.data);
-        assertEquals(ex.helpUrl, expected.helpUrl);
+        assertStringIncludes(ex.helpUrl, expected.helpUrl);
       });
     });
   });
@@ -95,7 +101,7 @@ describe('FutureWarning', () => {
         assertEquals(ex.code, expected.code);
         assertEquals(ex.cause, expected.cause);
         assertEquals(ex.data, expected.data);
-        assertEquals(ex.helpUrl, expected.helpUrl);
+        assertStringIncludes(ex.helpUrl, expected.helpUrl);
       });
     });
   });

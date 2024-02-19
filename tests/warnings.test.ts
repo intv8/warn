@@ -29,8 +29,8 @@ describe('DeprecationWarning', () => {
     const groupedWarnings = warnings.groupWarnings();
     const groupKeys = Object.keys(groupedWarnings);
 
-    assertSpyCalls(consoleWarnSpy, 7);
-    assertSpyCalls(consoleLogSpy, 9);
+    assertSpyCalls(consoleWarnSpy, 8);
+    assertSpyCalls(consoleLogSpy, 16);
 
     assertEquals(allWarnings.length, 16);
     assertEquals(groupKeys.length, 5);
@@ -41,5 +41,7 @@ describe('DeprecationWarning', () => {
     assertEquals(groupedWarnings.DiskWarning.length, 5);
     assertEquals(filteredStringWarnings.length, 3);
     assertEquals(filteredTypeWarnings.length, 5);
+    consoleWarnSpy.restore();
+    consoleLogSpy.restore();
   });
 });

@@ -15,16 +15,12 @@ import {
   WarningCollector,
   warnings,
 } from '../../mod.ts';
-//  count = 16
-//  ConnectionWarning count = 7
-//  Warning count = 1
-//  MemoryWarning count = 1
-//  ProcessWarning count = 2
-//  DiskWarning count = 5
-// console.warn count = 7
-// console.log count = 9
 
 export function fixture(): void {
+  warnings.events.addEventHandler(
+    'add',
+    (warning) => console.log('Warning:', warning.message),
+  );
   warnings.warn(new ConnectionWarning('A connection is slow.'));
   warnings.warn(new ConnectionWarning('A connection is lossy.'));
   warnings.warn(new ConnectionWarning('A connection is latent.'));
@@ -33,8 +29,11 @@ export function fixture(): void {
   warnings.warn('A connection is dropping packets.', ConnectionWarning);
   warnings.warn('A connection is dropping packets.', ConnectionWarning);
 
-  warnings.setCollector(
-    new WarningCollector((message: string) => console.log('Warning:', message)),
+  warnings.setCollector(new WarningCollector());
+
+  warnings.events.addEventHandler(
+    'add',
+    (warning) => console.warn('Warning:', warning.message),
   );
 
   warnings.warn(new MemoryWarning('Memory is exhausted.'));

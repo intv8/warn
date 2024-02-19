@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['A connection is lossy.', {
     name: 'ConnectionWarning',
@@ -18,8 +16,7 @@ export const messageFixtures = [
     asValue: 69,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x45?message=A%20connection%20is%20lossy.`,
+    helpUrl: `/0x45?message=A%20connection%20is%20lossy.`,
   }],
 ] as const;
 
@@ -32,12 +29,11 @@ export const messageCauseFixtures = [
     code: 69,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x45?message=A%20connection%20is%20lossy.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x45?message=A%20connection%20is%20lossy.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -50,10 +46,9 @@ export const messageDataFixtures = [
     code: 69,
     cause: undefined,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x45?message=A%20connection%20is%20lossy.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }`,
+    helpUrl: `/0x45?message=A%20connection%20is%20lossy.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }`,
   }],
 ] as const;
 
@@ -64,13 +59,12 @@ export const messageDataCauseFixtures = [
     code: 69,
     cause: cause0,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x45?message=A%20connection%20is%20lossy.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x45?message=A%20connection%20is%20lossy.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;

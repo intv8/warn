@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['Running out of memory.', {
     name: 'OSWarning',
@@ -18,8 +16,7 @@ export const messageFixtures = [
     asValue: 65,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x41?message=Running%20out%20of%20memory.`,
+    helpUrl: `/0x41?message=Running%20out%20of%20memory.`,
   }],
 ] as const;
 
@@ -32,12 +29,11 @@ export const messageCauseFixtures = [
     code: 65,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x41?message=Running%20out%20of%20memory.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x41?message=Running%20out%20of%20memory.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -50,10 +46,9 @@ export const messageDataFixtures = [
     code: 65,
     cause: undefined,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x41?message=Running%20out%20of%20memory.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }`,
+    helpUrl: `/0x41?message=Running%20out%20of%20memory.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }`,
   }],
 ] as const;
 
@@ -64,13 +59,12 @@ export const messageDataCauseFixtures = [
     code: 65,
     cause: cause0,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x41?message=Running%20out%20of%20memory.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x41?message=Running%20out%20of%20memory.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;

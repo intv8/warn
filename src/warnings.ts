@@ -4,33 +4,42 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-//  Import warning
 import { Warning } from './exceptions/warning.ts';
-
-//  Import warning collector
 import { WarningCollector } from './warning_collector.ts';
 
-//  Import Constructor type
-import type { Constructor } from '../deps.ts';
+import { type Constructor, EventEmitter, EventManager } from '../deps.ts';
+
+export type WarningsManagerEvents = {
+  add: (warning: Warning) => void;
+};
 
 /** A class interfacing with a {@link WarningCollector} to add and view warnings. */
 class WarningsManager {
   /** Creates a new {@link WarningsManager} with the provided {@link WarningCollector}. */
-  constructor(protected collector: WarningCollector) {}
+  constructor(protected collector: WarningCollector) {
+    this.emitter = this.events.getEventEmitter();
+  }
+
+  /** The event emitter for this {@link WarningsManager}. */
+  protected emitter: EventEmitter<WarningsManagerEvents>;
+
+  /** The events manager for this {@link WarningsManager}. */
+  public readonly events = new EventManager<WarningsManagerEvents>();
 
   /** Sets the {@link WarningCollector} to use for this {@link WarningsManager}. */
   public setCollector(newCollector: WarningCollector): void {
-    const { collector } = this;
+    const { collector, emitter } = this;
     const warnings = collector.listWarnings();
 
     collector.migrateTo(newCollector);
 
     if (warnings.length > 0) {
-      newCollector.add(
-        new Warning(
-          `${warnings.length} warnings were transferred to a new collector.`,
-        ),
+      const warning = new Warning(
+        `${warnings.length} warnings were transferred to a new collector.`,
       );
+
+      newCollector.add(warning);
+      emitter.emit('add', warning);
     }
 
     this.collector = newCollector;
@@ -44,13 +53,17 @@ class WarningsManager {
     messageOrWarning: string | Warning,
     type?: Constructor<Warning>,
   ): void {
-    const { collector } = this;
+    const { collector, emitter } = this;
     if (typeof messageOrWarning === 'string') {
       if (type) {
-        collector.add(new type(messageOrWarning));
+        const warning = new type(messageOrWarning);
+
+        collector.add(warning);
+        emitter.emit('add', warning);
       }
     } else {
       collector.add(messageOrWarning);
+      emitter.emit('add', messageOrWarning);
     }
   }
 
@@ -88,9 +101,7 @@ class WarningsManager {
   }
 }
 
-const defaultLogger = (message: string) => console.warn(message);
-
 /** The global {@link WarningsManager} instance. */
 export const warnings = new WarningsManager(
-  new WarningCollector(defaultLogger),
+  new WarningCollector(),
 );

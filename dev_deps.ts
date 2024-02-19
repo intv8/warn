@@ -12,21 +12,16 @@ export {
   beforeEach,
   describe,
   it,
-} from 'https://deno.land/std@0.203.0/testing/bdd.ts';
+} from 'https://deno.land/std@0.213.0/testing/bdd.ts';
 
 export {
   assert,
   assertEquals,
-} from 'https://deno.land/std@0.203.0/testing/asserts.ts';
+  assertStringIncludes,
+} from 'https://deno.land/std@0.213.0/assert/mod.ts';
 
 export {
   assertSpyCalls,
   spy,
   stub,
-} from 'https://deno.land/std@0.203.0/testing/mock.ts';
-
-export {
-  allCodesFixture,
-  I11N_EX2_HOST,
-  I11N_EX2_PATH,
-} from 'https://denopkg.com/intv8/core-exceptions@dev/__xsys_test_mod.ts';
+} from 'https://deno.land/std@0.213.0/testing/mock.ts';

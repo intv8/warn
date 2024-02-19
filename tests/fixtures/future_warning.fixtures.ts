@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['A feature will change in the future.', {
     name: 'FutureWarning',
@@ -18,8 +16,7 @@ export const messageFixtures = [
     asValue: 72,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x48?message=A%20feature%20will%20change%20in%20the%20future.`,
+    helpUrl: `/0x48?message=A%20feature%20will%20change%20in%20the%20future.`,
   }],
 ] as const;
 
@@ -33,7 +30,7 @@ export const messageCauseFixtures = [
     cause: cause0,
     data: undefined,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x48?message=A%20feature%20will%20change%20in%20the%20future.&cause=${
+      `/0x48?message=A%20feature%20will%20change%20in%20the%20future.&cause=${
         encodeURIComponent(
           JSON.stringify({ name: 'Error', message: cause0.message }),
         )
@@ -51,7 +48,7 @@ export const messageDataFixtures = [
     cause: undefined,
     data,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x48?message=A%20feature%20will%20change%20in%20the%20future.&data=${
+      `/0x48?message=A%20feature%20will%20change%20in%20the%20future.&data=${
         encodeURIComponent(JSON.stringify(data))
       }`,
   }],
@@ -65,7 +62,7 @@ export const messageDataCauseFixtures = [
     cause: cause0,
     data,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x48?message=A%20feature%20will%20change%20in%20the%20future.&data=${
+      `/0x48?message=A%20feature%20will%20change%20in%20the%20future.&data=${
         encodeURIComponent(JSON.stringify(data))
       }&cause=${
         encodeURIComponent(

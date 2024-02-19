@@ -6,8 +6,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 import { Warning } from '../../mod.ts';
 
 export const messageFixtures = [
@@ -19,8 +17,7 @@ export const messageFixtures = [
     asValue: 64,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Something%20is%20going%20wrong.`,
+    helpUrl: `/0x40?message=Something%20is%20going%20wrong.`,
   }],
 ] as const;
 
@@ -33,12 +30,11 @@ export const messageCauseFixtures = [
     code: 64,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Something%20is%20going%20wrong.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x40?message=Something%20is%20going%20wrong.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -51,10 +47,9 @@ export const messageDataFixtures = [
     code: 64,
     cause: undefined,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Something%20is%20going%20wrong.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }`,
+    helpUrl: `/0x40?message=Something%20is%20going%20wrong.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }`,
   }],
 ] as const;
 
@@ -65,14 +60,13 @@ export const messageDataCauseFixtures = [
     code: 64,
     cause: cause0,
     data,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Something%20is%20going%20wrong.&data=${
-        encodeURIComponent(JSON.stringify(data))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x40?message=Something%20is%20going%20wrong.&data=${
+      encodeURIComponent(JSON.stringify(data))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -92,35 +86,32 @@ export const nestedFixtures = [
     code: 64,
     cause: cause2,
     data: { qux: true },
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Something%20is%20going%20wrong.&data=${
-        encodeURIComponent(JSON.stringify({ qux: true }))
-      }&cause=${
-        encodeURIComponent(JSON.stringify({
-          name: 'Warning',
-          message: cause2.message,
-          helpUrl:
-            `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=Cannot%20complete%20process.&data=${
-              encodeURIComponent(JSON.stringify({ baz: 42 }))
+    helpUrl: `/0x40?message=Something%20is%20going%20wrong.&data=${
+      encodeURIComponent(JSON.stringify({ qux: true }))
+    }&cause=${
+      encodeURIComponent(JSON.stringify({
+        name: 'Warning',
+        message: cause2.message,
+        helpUrl: `/0x40?message=Cannot%20complete%20process.&data=${
+          encodeURIComponent(JSON.stringify({ baz: 42 }))
+        }&cause=${
+          encodeURIComponent(JSON.stringify({
+            name: 'Warning',
+            message: cause1.message,
+            helpUrl: `/0x40?message=An%20error%20occurred.&data=${
+              encodeURIComponent(JSON.stringify({ foo: 'bar' }))
             }&cause=${
-              encodeURIComponent(JSON.stringify({
-                name: 'Warning',
-                message: cause1.message,
-                helpUrl:
-                  `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x40?message=An%20error%20occurred.&data=${
-                    encodeURIComponent(JSON.stringify({ foo: 'bar' }))
-                  }&cause=${
-                    encodeURIComponent(
-                      JSON.stringify({
-                        name: 'Error',
-                        message: cause0.message,
-                      }),
-                    )
-                  }`,
-              }))
+              encodeURIComponent(
+                JSON.stringify({
+                  name: 'Error',
+                  message: cause0.message,
+                }),
+              )
             }`,
-        }))
-      }`,
+          }))
+        }`,
+      }))
+    }`,
   }],
 ] as const;
 

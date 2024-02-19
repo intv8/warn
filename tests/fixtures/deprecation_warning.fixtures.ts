@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['', {
     name: 'DeprecationWarning',
@@ -18,8 +16,7 @@ export const messageFixtures = [
     asValue: 75,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20feature%20has%20been%20deprecated.`,
+    helpUrl: `/0x4b?message=A%20feature%20has%20been%20deprecated.`,
   }],
   ['This feature will be removed.', {
     name: 'DeprecationWarning',
@@ -29,8 +26,7 @@ export const messageFixtures = [
     asValue: 75,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=This%20feature%20will%20be%20removed.`,
+    helpUrl: `/0x4b?message=This%20feature%20will%20be%20removed.`,
   }],
 ] as const;
 
@@ -60,8 +56,7 @@ export const initFixtures = [
     asValue: 75,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20feature%20has%20been%20deprecated.`,
+    helpUrl: `/0x4b?message=A%20feature%20has%20been%20deprecated.`,
   }],
   [init1, {
     name: 'DeprecationWarning',
@@ -71,10 +66,9 @@ export const initFixtures = [
     asValue: 75,
     cause: undefined,
     data: init1,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20function%20has%20been%20deprecated.&data=${
-        encodeURIComponent(JSON.stringify(init1))
-      }`,
+    helpUrl: `/0x4b?message=A%20function%20has%20been%20deprecated.&data=${
+      encodeURIComponent(JSON.stringify(init1))
+    }`,
   }],
   [init2, {
     name: 'DeprecationWarning',
@@ -86,7 +80,7 @@ export const initFixtures = [
     cause: undefined,
     data: init2,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.&data=${
+      `/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.&data=${
         encodeURIComponent(JSON.stringify(init2))
       }`,
   }],
@@ -100,7 +94,7 @@ export const initFixtures = [
     cause: undefined,
     data: init3,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20feature%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
+      `/0x4b?message=A%20feature%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
         encodeURIComponent(JSON.stringify(init3))
       }`,
   }],
@@ -115,7 +109,7 @@ export const initFixtures = [
     cause: undefined,
     data: init4,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20feature%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=A%20feature%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init4))
       }`,
   }],
@@ -129,7 +123,7 @@ export const initFixtures = [
     cause: undefined,
     data: init5,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.&data=${
+      `/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.&data=${
         encodeURIComponent(JSON.stringify(init5))
       }`,
   }],
@@ -143,7 +137,7 @@ export const initFixtures = [
     cause: undefined,
     data: init6,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20function%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
+      `/0x4b?message=A%20function%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
         encodeURIComponent(JSON.stringify(init6))
       }`,
   }],
@@ -158,7 +152,7 @@ export const initFixtures = [
     cause: undefined,
     data: init7,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20function%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=A%20function%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init7))
       }`,
   }],
@@ -172,7 +166,7 @@ export const initFixtures = [
     cause: undefined,
     data: init8,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
+      `/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
         encodeURIComponent(JSON.stringify(init8))
       }`,
   }],
@@ -187,7 +181,7 @@ export const initFixtures = [
     cause: undefined,
     data: init9,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init9))
       }`,
   }],
@@ -202,7 +196,7 @@ export const initFixtures = [
     cause: undefined,
     data: init10,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20feature%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=A%20feature%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init10))
       }`,
   }],
@@ -216,7 +210,7 @@ export const initFixtures = [
     cause: undefined,
     data: init11,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
+      `/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.&data=${
         encodeURIComponent(JSON.stringify(init11))
       }`,
   }],
@@ -231,7 +225,7 @@ export const initFixtures = [
     cause: undefined,
     data: init12,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init12))
       }`,
   }],
@@ -246,7 +240,7 @@ export const initFixtures = [
     cause: undefined,
     data: init13,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=A%20function%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=A%20function%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init13))
       }`,
   }],
@@ -261,7 +255,7 @@ export const initFixtures = [
     cause: undefined,
     data: init14,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=The%20feature%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init14))
       }`,
   }],
@@ -276,7 +270,7 @@ export const initFixtures = [
     cause: undefined,
     data: init15,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
+      `/0x4b?message=The%20function%20%22example%22%20has%20been%20deprecated.%20Instead%2C%20use%20%22test%22.%20Read%20more%20at%20https%3A%2F%2Fcl.docs.i11n.org%2Fp11%2Ftest%2Fexample.&data=${
         encodeURIComponent(JSON.stringify(init15))
       }`,
   }],
@@ -291,12 +285,11 @@ export const messageCauseFixtures = [
     code: 75,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=This%20feature%20is%20deprecated.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x4b?message=This%20feature%20is%20deprecated.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -307,10 +300,9 @@ export const messageDataFixtures = [
     code: 75,
     cause: undefined,
     data: init15,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=This%20feature%20is%20deprecated.&data=${
-        encodeURIComponent(JSON.stringify(init15))
-      }`,
+    helpUrl: `/0x4b?message=This%20feature%20is%20deprecated.&data=${
+      encodeURIComponent(JSON.stringify(init15))
+    }`,
   }],
 ] as const;
 
@@ -321,13 +313,12 @@ export const messageDataCauseFixtures = [
     code: 75,
     cause: cause0,
     data: init15,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x4b?message=This%20feature%20is%20deprecated.&data=${
-        encodeURIComponent(JSON.stringify(init15))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x4b?message=This%20feature%20is%20deprecated.&data=${
+      encodeURIComponent(JSON.stringify(init15))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
